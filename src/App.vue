@@ -1,15 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/k3rnel_logo.png">
+    <Main />
   </div>
 </template>
 
 <script>
+import Main from './components/Main'
 export default {
   name: 'App',
-  components: {}
+  components: {
+    Main
+  }
 }
 </script>
 
 <style>
+@font-face {
+  font-family: "RobotoMono";
+  src: url("./fonts/RobotoMono-Thin.ttf");
+}
+* {
+  font-family: "RobotoMono", monospace;
+  margin: 0;
+}
+
+#app {
+  height: 100vh;
+  background-color: gray;
+}
 </style>
