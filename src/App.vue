@@ -19,6 +19,7 @@ export default {
   font-family: "RobotoMono";
   src: url("./fonts/RobotoMono-Thin.ttf");
 }
+
 * {
   font-family: "RobotoMono", monospace;
   margin: 0;
