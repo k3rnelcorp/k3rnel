@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: "header",
+  name: "Header",
 };
 </script>
 
@@ -66,18 +66,19 @@ export default {
 }
 
 .nav {
-  width: 100vw;
+  width: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
-
 }
 
 .nav button {
   background: transparent;
   border: none;
   color: #FFFFFF;
+  cursor: pointer;
   font-size: 1.1rem;
+  outline: none;
 }
 
 .nav button:hover {

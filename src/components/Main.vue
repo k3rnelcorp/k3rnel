@@ -19,12 +19,18 @@ export default {
 </script>
 
 <style>
+
+* {
+  box-sizing: border-box;
+}
 div .main {
-    box-sizing: border-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
+
 .test {
   height: 1500px;
 }
+
 </style>
