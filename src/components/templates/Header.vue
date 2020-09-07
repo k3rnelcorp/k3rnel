@@ -8,13 +8,19 @@
     <nav class="nav">
       <ul>
         <li>
-          <a href="/inicio">Início</a>
+          <a href="/">
+            <button>Início</button>
+          </a>
         </li>
         <li>
-          <a href="/sobre">Sobre</a>
+          <a href="/sobre">
+          <button>Sobre</button>
+          </a>
         </li>
         <li>
-          <a href="/contado">Contate-nos</a>
+          <a href="/contado">
+          <button>Contate-nos</button>
+          </a>
         </li>
       </ul>
     </nav>
@@ -64,11 +70,27 @@ export default {
   position: absolute;
   display: flex;
   justify-content: center;
+
+}
+
+.nav button {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+}
+
+.nav button:hover {
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .nav ul {
   display: flex;
   list-style: none;
+}
+
+ul > li {
+  margin-right: 50px;
 }
 
 .containerButton .button{
@@ -102,10 +124,6 @@ export default {
 
 .github:hover {
   background-color: #2e2f30;
-}
-
-ul > li {
-  margin-right: 50px;
 }
 
 </style>
