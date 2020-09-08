@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <Header />
-    <div class="test"></div>
+    <router-view />
     <Footer />
   </div>
 </template>
@@ -19,18 +19,7 @@ export default {
 </script>
 
 <style>
-
 * {
   box-sizing: border-box;
 }
-div .main {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-.test {
-  height: 1500px;
-}
-
 </style>

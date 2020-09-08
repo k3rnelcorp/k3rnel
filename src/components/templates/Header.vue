@@ -1,43 +1,26 @@
 <template>
   <div class="header">
-    <div class="logo">
-      <a href="/">
-        <img src="../../assets/logo-dark-48px.png" alt="logo" />
-      </a>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li>
-          <a href="/">
-            <button>Início</button>
-          </a>
-        </li>
-        <li>
-          <a href="/sobre">
-          <button>Sobre</button>
-          </a>
-        </li>
-        <li>
-          <a href="/contado">
-          <button>Contate-nos</button>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <img class="logo" src="../../assets/logo-dark.png" alt="logo">
+    <Nav />
     <div class="containerButton">
-      <a href="https://github.com/k3rnelcorp" target="_blank">
-        <button class="button github">GitHub</button>
-      </a>
-      <a href="https://discord.com/" target="_blank">
-        <button class="button discord">Discord</button>
-      </a>
+        <button class="button github" v-on:click="openLink('https://github.com/k3rnelcorp')">GitHub</button>
+        <button class="button discord" v-on:click="openLink('https://discord.com/')">Discord</button>
     </div>
   </div>
 </template>
 
 <script>
+import Nav from './Nav'
 export default {
   name: "Header",
+  components: {
+    Nav
+  }, 
+  methods: {
+    openLink(url) {
+      window.open(url)
+    }
+  }
 };
 </script>
 
@@ -47,51 +30,12 @@ export default {
   align-items: center;
   background-color: #1a1a1a;
 }
-
 .logo a {
   display: flex;
 }
-
-.logo img {
-  padding: 15px 80px;
-  max-height: 55px;
-}
-
-.nav a {
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.nav {
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-}
-
-.nav button {
-  background: transparent;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1.1rem;
-  outline: none;
-}
-
-.nav button:hover {
-  border-bottom: 1px solid #FFFFFF;
-}
-
-.nav ul {
-  display: flex;
-  list-style: none;
-}
-
-ul > li {
-  margin-right: 50px;
+.logo {
+  padding: 8px 80px;
+  max-height: 53px;
 }
 
 .containerButton .button{
@@ -106,7 +50,6 @@ ul > li {
   cursor: pointer;
   margin-right: 40px;
 }
-
 .containerButton .discord {
   background-color: #7289da;
 }
@@ -118,13 +61,10 @@ ul > li {
   right: 0px;
   margin-right: 40px;
 }
-
 .discord:hover {
   background-color: #637fe7;
 }
-
 .github:hover {
   background-color: #2e2f30;
 }
-
 </style>
