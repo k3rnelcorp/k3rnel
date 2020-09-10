@@ -32,9 +32,7 @@ export default {
     created() {
         const urlSplit = window.location.href.split('/')
         const params = urlSplit[urlSplit.length - 1]
-        console.log(params)
         for (let index in this.names) {
-            console.log(index)
             if (this.names[index] == params) {
                 this.current = index
                 break
@@ -73,6 +71,7 @@ export default {
   background: transparent;
   border: none;
   color: #ffffff;
+  font-weight: 600;
   cursor: pointer;
   font-size: 1.1rem;
   outline: none;
