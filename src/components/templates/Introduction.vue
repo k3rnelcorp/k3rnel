@@ -24,6 +24,7 @@ export default {
 
 .introduction h1{
     font-weight: bolder;
+    font-family: "JetBrainsMono";
 }
 
 .introduction > p{

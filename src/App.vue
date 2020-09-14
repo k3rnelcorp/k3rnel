@@ -20,6 +20,11 @@ export default {
   src: url("./fonts/RobotoMono-Thin.ttf");
 }
 
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("./fonts/JetBrainsMono-Variable.ttf");
+}
+
 * {
   font-family: "RobotoMono", monospace;
   margin: 0;

@@ -71,7 +71,7 @@ export default {
   background: transparent;
   border: none;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   font-size: 1.1rem;
   outline: none;
