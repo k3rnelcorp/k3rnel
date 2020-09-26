@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div  class="footer defaultFont">
     <span>© 2020 k3rnel</span>
     <span>by <strong>clust<span class="blue">3</span>rr</strong>
     </span>

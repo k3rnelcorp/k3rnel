@@ -1,5 +1,5 @@
 <template>
-    <div class="introduction">
+    <div class="introduction defaultFont">
         <h1>{{ title }}</h1>
         <p>{{ subtitle.replace(/'/g, '"') }}</p>
         <p>{{ description }}</p>

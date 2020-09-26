@@ -3,17 +3,17 @@
     <ul>
       <li>
         <router-link to="/inicio">
-          <button v-bind:class="{ select: isSelected[0]}" v-on:click="selected(0)">Início</button>
+          <button v-bind:class="{ defaultFont: true, select: isSelected[0]}" v-on:click="selected(0)">Início</button>
         </router-link>
       </li>
       <li>
         <router-link to="/sobre">
-          <button v-bind:class="{ select: isSelected[1]}" v-on:click="selected(1)">Sobre</button>
+          <button v-bind:class="{ defaultFont: true, select: isSelected[1]}" v-on:click="selected(1)">Sobre</button>
         </router-link>
       </li>
       <li>
         <router-link to="/contato">
-          <button v-bind:class="{ select: isSelected[2]}" v-on:click="selected(2)">Contate-nos</button>
+          <button v-bind:class="{ defaultFont: true, select: isSelected[2]}" v-on:click="selected(2)">Contate-nos</button>
         </router-link>
       </li>
     </ul>

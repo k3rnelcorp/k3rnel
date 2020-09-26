@@ -15,14 +15,13 @@ export default {
 <style>
 .page {
     display: flex;
+    flex: 1;
+    min-height: calc(100vh - 48px - 53px);
     justify-content: center;
     background-color: #24292e;
 }
 
 .row {
-    display: flex;
     width: 70%;
-    flex-direction: column;
-    justify-content: center;
 }
 </style>

@@ -1,26 +1,93 @@
 <template>
-  <div class="contato"></div>
+  <div class="contato">
+    <div class="formHeader">
+      <p class="title">Fala garoto!</p>
+    </div>
+    <div class="logoContainer">
+      <div class="logoBind">
+        <img class="logoSpin" v-bind:src="logo" alt="logo" />
+        <img class="chip" v-bind:src="chip" alt="chip" />
+      </div>
+    </div>
+    <Form />
+  </div>
 </template>
 
 <script>
+import Form from "../templates/Form";
+import logo from "../../assets/logoSemChip.png";
+import chip from "../../assets/chip.png";
 export default {
-computed: {
+  components: {
+    Form,
+  },
+  data() {
+    return {
+      logo,
+      chip,
+    };
+  },
+  computed: {
     username() {
       // We will see what `params` is shortly
-      return this.$route.params.username
-    }
+      return this.$route.params.username;
+    },
   },
   methods: {
     goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-    }
-  }
-}
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
+    },
+  },
+};
 </script>
 
 <style>
-.contato {
-  background-color: blue;
-  height: 200vh;
+.formHeader .title {
+  margin: 30px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "JetBrainsMono";
+  color: white;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.logoBind {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.logoBind img {
+  position: absolute;
+}
+
+.logoBind .logoSpin {
+  width: 200px;
+}
+
+.logoBind .chip {
+  width: 26px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logoSpin {
+    animation: logoSpin infinite 5s linear;
+  }
+}
+
+@keyframes logoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

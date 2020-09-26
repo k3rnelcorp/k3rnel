@@ -3,6 +3,7 @@
     <Header />
     <PageView />
     <Footer />
+    <vue-snotify></vue-snotify>
   </div>
 </template>
 
@@ -21,5 +22,9 @@ export default {
 </script>
 
 <style>
-
+.main {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 </style>

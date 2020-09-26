@@ -25,10 +25,15 @@ export default {
   src: url("./fonts/JetBrainsMono-Variable.ttf");
 }
 
+@import "~vue-snotify/styles/material.css";
+
 * {
-  font-family: "RobotoMono", monospace;
   margin: 0;
   box-sizing: border-box;
+}
+
+* .defaultFont {
+  font-family: "RobotoMono", monospace;
 }
 
 #app {

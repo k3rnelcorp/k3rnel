@@ -2,9 +2,9 @@
   <div class="header">
     <img class="logo" src="../../assets/logo-dark.png" alt="logo">
     <Nav />
-    <div class="containerButton">
-        <button class="button github" v-on:click="openLink('https://github.com/k3rnelcorp')">GitHub</button>
-        <button class="button discord" v-on:click="openLink('https://discord.com/')">Discord</button>
+    <div class="containerButton defaultFont">
+        <button class="defaultFont button github" v-on:click="openLink('https://github.com/k3rnelcorp')">GitHub</button>
+        <button class="defaultFont button discord" v-on:click="openLink('https://discord.com/')">Discord</button>
     </div>
   </div>
 </template>
