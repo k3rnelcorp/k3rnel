@@ -57,8 +57,7 @@ export default {
 <style>
 .formContainer {
   color: white;
-  width: 100%;
-  margin: 10px 0px;
+  margin: 10px 200px;
   padding: 10px;
   background-color: #2e2f30;
   border-radius: 10px;
