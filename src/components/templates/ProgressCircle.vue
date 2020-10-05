@@ -46,19 +46,16 @@ export default {
       circumference: Number,
     };
   },
-  computed: {
-
-  },
   methods: {
     getRadius() {
       return this.props.diameter / 2 - this.props.stroke * 2;
     },
-    getCircumference(radius) {
-      return radius * 2 * Math.PI;
+    getCircumference() {
+      return this.radius * 2 * Math.PI;
     },
-    setCircumference() {
-      this.circle.style.strokeDasharray = `${this.circumference} ${this.circumference}`;
-      this.circle.style.strokeDashoffset = this.circumference;
+    setCircumference(circumference) {
+      this.circle.style.strokeDasharray = `${circumference} ${circumference}`;
+      this.circle.style.strokeDashoffset = circumference;
     },
     setProgress(percent) {
       const offset = this.circumference - (percent / 100) * this.circumference;
@@ -66,18 +63,13 @@ export default {
     }
   },
   mounted() {
-    console.log(this)
-
-    const pc = this.$el.children[0]
-    pc.style.height = `${this.props.diameter}px`
-    pc.style.width = `${this.props.diameter}px`
-
-    console.log(this.$el.children[0].children[0].children[1]);
-  
+    const progreessContainer = this.$el.children[0]
+    progreessContainer.style.height = `${this.props.diameter}px`
+    progreessContainer.style.width = `${this.props.diameter}px`
     this.circle = this.$el.children[0].children[0].children[1]
     this.radius = this.getRadius();
-    this.circumference = this.getCircumference(this.radius);
-    this.setCircumference();
+    this.circumference = this.getCircumference();
+    this.setCircumference(this.circumference);
     this.setProgress(this.props.progress);
   },
 };
