@@ -57,7 +57,7 @@ export default {
 <style>
 .formContainer {
   color: white;
-  margin: 10px 200px;
+  margin: 25px 160px;
   padding: 10px;
   background-color: #2e2f30;
   border-radius: 10px;
@@ -155,5 +155,29 @@ form.formulate-form div.formulate-input-element > button:hover {
 
 .snotifyToast {
   font-family: "JetBrainsMono";
+}
+
+@media (max-width: 1024px) {
+.formContainer {
+    margin: 25px 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    margin: 25px 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .formContainer {
+    margin: 25px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .formContainer {
+    margin: 25px 0px;
+  }
 }
 </style>
