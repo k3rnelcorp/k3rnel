@@ -29,4 +29,27 @@ export default {
 .blue {
   color: #007bff;
 }
+
+@media (max-width: 768px) { 
+  .footer {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 370px) { 
+  .footer {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+
 </style>

@@ -3,17 +3,17 @@
     <ul>
       <li>
         <router-link to="/inicio">
-          <button v-bind:class="{ defaultFont: true, select: isSelected[0]}" v-on:click="selected(0)">Início</button>
+          <button v-bind:class="{ buttonNav: true, defaultFont: true, select: isSelected[0]}" v-on:click="selected(0)">Início</button>
         </router-link>
       </li>
       <li>
         <router-link to="/sobre">
-          <button v-bind:class="{ defaultFont: true, select: isSelected[1]}" v-on:click="selected(1)">Sobre</button>
+          <button v-bind:class="{ buttonNav: true, defaultFont: true, select: isSelected[1]}" v-on:click="selected(1)">Sobre</button>
         </router-link>
       </li>
       <li>
         <router-link to="/contato">
-          <button v-bind:class="{ defaultFont: true, select: isSelected[2]}" v-on:click="selected(2)">Contate-nos</button>
+          <button v-bind:class="{ buttonNav: true, defaultFont: true, select: isSelected[2]}" v-on:click="selected(2)">Contate-nos</button>
         </router-link>
       </li>
     </ul>
@@ -88,9 +88,39 @@ export default {
 .nav ul {
   display: flex;
   list-style: none;
+  padding-left: 0px;
 }
 
 ul > li {
   margin-right: 50px;
+}
+
+@media (max-width: 460px) {
+  .nav button {
+    font-size: 1.1rem;
+  }
+  ul > li {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 366px) {
+  .nav button {
+    font-size: 1rem;
+  }
+  ul > li {
+    margin-right: 10px;
+  }
+
+}
+
+@media (max-width: 354px) {
+  .nav button {
+    font-size: 0.9rem;
+  }
+  ul > li {
+    margin-right: 0px;
+  }
+  
 }
 </style>

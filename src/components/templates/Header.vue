@@ -1,26 +1,36 @@
 <template>
   <div class="header">
-    <img class="logo" src="../../assets/logo-dark.png" alt="logo">
+    <img class="logo" src="../../assets/logo-dark.png" alt="logo" />
     <Nav />
     <div class="containerButton defaultFont">
-        <button class="defaultFont button github" v-on:click="openLink('https://github.com/k3rnelcorp')">GitHub</button>
-        <button class="defaultFont button discord" v-on:click="openLink('https://discord.com/')">Discord</button>
+      <button
+        class="defaultFont button github"
+        v-on:click="openLink('https://github.com/k3rnelcorp')"
+      >
+        GitHub
+      </button>
+      <button
+        class="defaultFont button discord"
+        v-on:click="openLink('https://discord.com/')"
+      >
+        Discord
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-import Nav from './Nav'
+import Nav from "./Nav";
 export default {
   name: "Header",
   components: {
-    Nav
-  }, 
+    Nav,
+  },
   methods: {
     openLink(url) {
-      window.open(url)
-    }
-  }
+      window.open(url);
+    },
+  },
 };
 </script>
 
@@ -30,15 +40,13 @@ export default {
   align-items: center;
   background-color: #1a1a1a;
 }
-.logo a {
-  display: flex;
-}
+
 .logo {
   padding: 8px 80px;
   max-height: 53px;
 }
 
-.containerButton .button{
+.containerButton .button {
   margin-right: 0px;
   border-radius: 0.25rem;
   color: #ffffff;
@@ -67,4 +75,34 @@ export default {
 .github:hover {
   background-color: #2e2f30;
 }
+
+@media (max-width: 992px) {
+  .containerButton {
+    visibility: hidden;
+  }
+
+  .header {
+    justify-content: end;
+  }
+
+  .logo {
+    padding-left: 40px;
+  }
+
+  .nav {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    visibility: hidden;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+}
+
+
 </style>
