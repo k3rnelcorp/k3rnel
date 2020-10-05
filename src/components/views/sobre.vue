@@ -4,41 +4,16 @@
       <div class="title">
         <h1>A Equipe</h1>
       </div>
-      <Card
+      <Card 
         class="member"
-        nickname="clust3rr"
-        ownName="Thiago Silva"
-        url="https://www.linkedin.com/in/clust3rr/"
-        menssage="O carinha do fone chiado e net lixo que tem um pc gamer top, mas não usa..."
-        v-bind:image="Clust3rrPic"
-        v-bind:isRight="false"
-      />
-      <Card
-        class="member"
-        nickname="d3coding"
-        ownName="Mateus Junior"
-        url="https://www.linkedin.com/in/d3coding/"
-        menssage="Gasta o dinheiro com periféricos e comida (uma grande porcentagem)..."
-        v-bind:image="D3codingPic"
-        v-bind:isRight="true"
-      />
-      <Card
-        class="member"
-        nickname="d3cryptd"
-        ownName="Lucas Araújo"
-        url="https://www.linkedin.com/in/d3cryptd/"
-        menssage="Gasta 90% do tempo formatando o próprio PC, nos outros 10%, está comendo o cu de quem ta lendo..."
-        v-bind:image="D3cryptdPic"
-        v-bind:isRight="false"
-      />
-      <Card
-        class="member"
-        nickname="manfram3"
-        ownName="Maincon Colombo"
-        url="https://www.linkedin.com/in/manfram3/"
-        menssage="Desafia o corpo humano em atividades rotineiras e cansativas..."
-        v-bind:image="Manfram3Pic"
-        v-bind:isRight="true"
+        v-for="(member, i) in members"
+        :key="member.nickname"
+        :nickname="member.nickname"
+        :name="member.name"
+        :url="member.url"
+        :menssage="member.menssage"
+        :image="member.image"
+        :isRight="i % 2 == true"
       />
     </div>
   </div>
@@ -61,7 +36,37 @@ export default {
       Clust3rrPic,
       D3codingPic,
       D3cryptdPic,
-      Manfram3Pic
+      Manfram3Pic,
+      members: [
+        {
+          nickname: "clust3rr",
+          name: "Thiago Silva",
+          url: "https://www.linkedin.com/in/clust3rr/",
+          menssage: "O carinha do fone chiado e net lixo que tem um pc gamer top, mas não usa...",
+          image: Clust3rrPic
+        },
+        {
+          nickname: "d3coding",
+          name: "Mateus Junior",
+          url: "https://www.linkedin.com/in/d3coding/",
+          menssage: "Gasta o dinheiro com periféricos e comida (uma grande porcentagem)...",
+          image: D3codingPic
+        },
+        {
+          nickname: "d3cryptd",
+          name: "Lucas Araújo",
+          url: "https://www.linkedin.com/in/d3cryptd/",
+          menssage: "Gasta 90% do tempo formatando o próprio PC, nos outros 10%, está comendo o cu de quem ta lendo...",
+          image: D3cryptdPic
+        },
+        {
+          nickname: "manfram3",
+          name: "Maincon Colombo",
+          url: "https://www.linkedin.com/in/manfram3/",
+          menssage: "Desafia o corpo humano em atividades rotineiras e cansativas...",
+          image: Manfram3Pic
+        }
+      ]
     };
   },
   computed: {

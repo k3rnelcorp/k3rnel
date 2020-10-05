@@ -1,18 +1,18 @@
 <template>
-  <div v-bind:class="[{card: true, left: !right, right: right}]">
-    <img class="image" v-bind:src="img" v-bind:alt="name" />
+  <div v-bind:class="[{card: true, left: !props.isRight, right: props.isRight}]">
+    <img class="image" v-bind:src="props.image" v-bind:alt="props.name" />
     <div class="about">
       <div class="nickContainer">
-        <p class="nick">{{ nick }}</p>
+        <p class="nick">{{ props.nickname }}</p>
       </div>
       <div class="nameContainer">
-        <p class="name">{{ name }}</p>
+        <p class="name">{{ props.name }}</p>
       </div>
       <div class="menssageContainer">
-        <p class="menssage">{{ msg }}</p>
+        <p class="menssage">{{ props.menssage }}</p>
       </div>
       <div class="linkContainer">
-        <a class="link" v-bind:href="link" target="_blank">Linkedin</a>
+        <a class="link" v-bind:href="props.url" target="_blank">Linkedin</a>
       </div>
     </div>
   </div>
@@ -24,19 +24,12 @@ export default {
     nickname: String,
     image: String,
     url: String,
-    ownName: String,
+    name: String,
     menssage: String,
     isRight: Boolean,
   },
   data() {
-    return {
-      nick: this.nickname,
-      img: this.image,
-      link: this.url,
-      name: this.ownName,
-      msg: this.menssage,
-      right: this.isRight,
-    };
+    return { props: this.$props };
   }
 };
 </script>
