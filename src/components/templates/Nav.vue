@@ -13,7 +13,7 @@
       </li>
       <li>
         <router-link to="/contato">
-          <button v-bind:class="{ buttonNav: true, defaultFont: true, select: isSelected[2]}" v-on:click="selected(2)">Contate-nos</button>
+          <button v-bind:class="{ buttonNav: true, defaultFont: true, select: isSelected[2]}" v-on:click="selected(2)">Contato</button>
         </router-link>
       </li>
     </ul>
@@ -93,6 +93,14 @@ export default {
 
 ul > li {
   margin-right: 50px;
+}
+
+@media (max-width: 600px) {
+  .nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 460px) {

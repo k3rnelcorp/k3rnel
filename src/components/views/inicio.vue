@@ -82,7 +82,7 @@ export default {
 <style>
 
 .h1 {
-  margin: 150px 0;
+  margin: 110px 0;
 }
 .closureContainer {
   display: flex;
@@ -138,7 +138,7 @@ export default {
 }
 
 .history {
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
 }
 
@@ -162,7 +162,7 @@ export default {
 }
 
 .programmingContainer {
-  margin: 150px 0;
+  margin: 80px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -183,5 +183,82 @@ export default {
 .circleContainer {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .h1 {
+    margin: 70px 0;
+  }
+
+  .closure {
+    margin-left: 70px;
+  }
+
+  .containerMM {
+    margin-right: 70px;
+  }
+
+  .circleContainer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .closure {
+    margin-left: 30px;
+  }
+
+  .containerMM {
+    margin-right: 20px;
+  }
+
+  .convencao {
+    max-width: 80%;
+    right: auto;
+    max-height: calc(100vw * 0.74);
+    width: auto;
+    height: auto;
+  }
+
+  .textHistoryContainer {
+    padding: 20px 20px;
+  }
+
+  .history {
+    margin-top: 100px; 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .programmingContainer {
+    margin: 70px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .closureContainer {
+    flex-direction: column;
+  }
+
+  .containerMM {
+    margin-right: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: none;
+  }
+
+  .closure {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .closure {
+    margin: 0 10px;
+  }
 }
 </style>

@@ -105,7 +105,7 @@ export default {
   right: 20px;
 }
 .about .linkContainer .mobile {
-  visibility: hidden;
+  display: none;
 }
 
 .right .linkContainer {
@@ -142,11 +142,11 @@ export default {
   }
 
   .about .linkContainer .desktop {
-    visibility: collapse;
+    display: none;
   }
 
   .about .linkContainer .mobile {
-    visibility: visible;
+    display: unset;
     box-shadow: none;
     font-size: 1.1rem;
     padding: 4px 4px;
