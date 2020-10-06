@@ -1,5 +1,7 @@
 <template>
-  <div v-bind:class="[{card: true, left: !props.isRight, right: props.isRight}]">
+  <div
+    v-bind:class="[{ card: true, left: !props.isRight, right: props.isRight }]"
+  >
     <img class="image" v-bind:src="props.image" v-bind:alt="props.name" />
     <div class="about">
       <div class="nickContainer">
@@ -12,7 +14,10 @@
         <p class="menssage">{{ props.menssage }}</p>
       </div>
       <div class="linkContainer">
-        <a class="link" v-bind:href="props.url" target="_blank">Linkedin</a>
+        <a class="link desktop" v-bind:href="props.url" target="_blank"
+          >Linkedin</a
+        >
+        <a class="link mobile" v-bind:href="props.url" target="_blank">in</a>
       </div>
     </div>
   </div>
@@ -30,7 +35,7 @@ export default {
   },
   data() {
     return { props: this.$props };
-  }
+  },
 };
 </script>
 
@@ -91,13 +96,16 @@ export default {
   color: white;
   padding: 12px 20px;
   border-radius: 26px;
-  box-shadow: 0 16px 22px -17px #03153B;
+  box-shadow: 0 16px 22px -17px #03153b;
 }
 
 .about .linkContainer {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+.about .linkContainer .mobile {
+  visibility: hidden;
 }
 
 .right .linkContainer {
@@ -120,5 +128,42 @@ export default {
 .right p {
   float: right;
   text-align: right;
+}
+
+@media (max-width: 580px) {
+  .card {
+    flex-direction: column;
+    margin: 0 5px;
+  }
+
+  .about .linkContainer {
+    top: 20px;
+    right: 20px;
+  }
+
+  .about .linkContainer .desktop {
+    visibility: collapse;
+  }
+
+  .about .linkContainer .mobile {
+    visibility: visible;
+    box-shadow: none;
+    font-size: 1.1rem;
+    padding: 4px 4px;
+  }
+
+  .right p {
+    float: left;
+    text-align: left;
+  }
+
+  .right .linkContainer {
+    left: unset;
+  }
+
+  .image {
+    height: 390px;
+    width: 100%;
+  }
 }
 </style>

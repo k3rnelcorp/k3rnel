@@ -41,9 +41,5 @@ export default {};
   }
 }
 
-@media (max-width: 320px) {
-  .row {
-    width: 100%;
-  }
-}
+
 </style>
