@@ -1,0 +1,8 @@
+version: "3.4"
+services:
+  gitea:
+    image: ghcr.io/k3rnelcorp/k3rnel:latest
+    container_name: k3rnel
+    restart: unless-stopped
+    ports:
+      - "8080:80"
